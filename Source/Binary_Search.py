@@ -21,7 +21,7 @@ def binary_search(the_list, item):
 nl = list()
 tm = list()
 for i in range(1, 10):
-    n = 10000 * i
+    n = 100000 * i
     random_list = list(range(1, n))
     t1 = time.clock()
     binary_search(random_list, 0)  # to show the worst case result, we search something that is not the list
