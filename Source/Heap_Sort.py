@@ -4,7 +4,7 @@ import time
 
 
 
-def siftdown(the_list, start, end):
+def heapify(the_list, start, end):
     while True:
         child = start * 2 + 1
         if child > end:
@@ -20,11 +20,11 @@ def siftdown(the_list, start, end):
 
 def heap_sort(the_list):
     for start in range((len(the_list) - 2) // 2, -1, -1):
-        siftdown(the_list, start, len(the_list) - 1)
+        heapify(the_list, start, len(the_list) - 1)
 
     for end in range(len(the_list) - 1, 0, -1):
         the_list[end], the_list[0] = the_list[0], the_list[end]
-        siftdown(the_list, 0, end - 1)
+        heapify(the_list, 0, end - 1)
     return
 
 
