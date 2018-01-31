@@ -31,7 +31,7 @@ def heap_sort(the_list):
 nl = list()
 tm = list()
 for i in range(1, 10):
-    n = 1000 * i
+    n = 100000 * i
     random_list = list(range(1, n))
     reversed(random_list)  # for worst case result, we revers the list
 
