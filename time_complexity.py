@@ -133,9 +133,9 @@ the_label = ''
 if inp == 1:
     the_label = mpatches.Patch(label='time complexity for bubble sort')
     for i in range(1, 10):
-        n = 1000 * i
+        n = 100000 * i
         random_list = list(range(1, n))
-        reversed(random_list)  # reversing the list so we have the worst case
+        reversed(random_list)   # for worst case result, we revers the list
         t1 = time.clock()
         bubble_sort(random_list)
         t2 = time.clock()
@@ -146,10 +146,10 @@ if inp == 1:
 if inp == 2:
     the_label = mpatches.Patch(label='time complexity for binary search')
     for i in range(1, 10):
-        n = 1000000 * i
+        n = 100000 * i
         random_list = list(range(1, n))
         t1 = time.clock()
-        binary_search(random_list, 0)  # searching an item that does not exist, for worst case
+        binary_search(random_list, 0)   # to show the worst case result, we search something that is not the list
         t2 = time.clock()
         nl.append(n)
         tm.append(t2 - t1)
